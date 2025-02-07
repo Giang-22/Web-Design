@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var k = parseInt(window.document.taxi.kilomet.value);
+            if( k <= 10){
+                window.document.taxi.sumprice.value = k*15000;
+            }
+            else if(k<=50){
+                window.document.taxi.sumprice.value = 15000*10 + (k-10)*12000;
+            }
+            else{
+                window.document.taxi.sumprice.value = 15000*10 + 40*12000 + (k-50)*9000;
+            }
+        }
+        function Delete(){
+            window.document.taxi.sumprice.value = " ";
+            window.document.taxi.kilomet.value = " ";
+        }
+    </script>
+</head>
+<body>
+    <form name="taxi">
+        <table border="1">
+            <tr>
+                <th colspan="2">Chương trình tính tiền taxi</th>
+            </tr>
+            <tr>
+                <td>Số km đi được: </td>
+                <td><input type="text" name="kilomet"></td>
+            </tr>
+            <tr>
+                <td>Tiền thanh toán: </td>
+                <td><input type="text" name="sumprice"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Tính" onclick="carryout();">
+                    <input type="button" value="Xóa" onclick="Delete();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

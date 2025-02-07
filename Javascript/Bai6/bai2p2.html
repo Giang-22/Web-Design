@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sotien(){
+            var x = parseFloat(window.document.Taxi.sokm.value);
+            if(x<=10){
+                window.document.Taxi.sumprice.value = x * 15000;
+            }
+            else if(x<=50){
+                window.document.Taxi.sumprice.value = 10 * 15000 + (x-10)*12000;
+            }
+            else{
+                window.document.Taxi.sumprice.value = 10 * 15000 + 40*12000 + (x-50)*9000;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="Taxi">
+        <table border="1">
+            <tr>
+                <th colspan="2" style="height: 60px;">
+                    Chương trình tính tiền taxi
+                </th>
+            </tr>
+            <tr>
+                <td>Số km đã đi được: </td>
+                <td><input type="text" name="sokm"></td>
+            </tr>
+            <tr>
+                <td>Tiền thanh toán: </td>
+                <td><input type="text" name="sumprice"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tính" onclick="sotien();">
+                    <input type="button" value="Xóa">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

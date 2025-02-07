@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Select Your Date of Birth:</h3>
+
+    <form>
+        <label for="day">Day:</label>
+        <select id="day"></select>
+
+        <label for="month">Month:</label>
+        <select id="month"></select>
+
+        <label for="year">Year:</label>
+        <select id="year"></select>
+    </form>
+
+    <script>
+        var daySelect = document.getElementById("day");
+        for (var i = 1; i <= 31; i++) {
+            var option = document.createElement("option");
+            option.value = i;
+            option.text = i;
+            daySelect.appendChild(option);
+        }
+
+        // Populate month dropdown
+        var monthSelect = document.getElementById("month");
+        var months = [
+            "January", "February", "March", "April", "May", "June",
+            "July", "August", "September", "October", "November", "December"
+        ];
+        for (var i = 0; i < months.length; i++) {
+            var option = document.createElement("option");
+            option.value = i + 1;
+            option.text = months[i];
+            monthSelect.appendChild(option);
+        }
+
+        // Populate year dropdown
+        var yearSelect = document.getElementById("year");
+        var currentYear = new Date().getFullYear();
+        for (var i = currentYear; i >= 1900; i--) {
+            var option = document.createElement("option");
+            option.value = i;
+            option.text = i;
+            yearSelect.appendChild(option);
+        }
+    </script>
+</body>
+</html>

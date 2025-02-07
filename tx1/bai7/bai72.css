@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family:'Roboto', sans-serif ;
+}
+.container       {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+.header{
+    margin-top: 40px;
+    display: flex;
+    width: 1400px;
+    justify-content: space-around;
+    align-items: center;
+    border: 3px double black;
+}
+.pict-header img{
+    margin-top: 4px;
+    height: 120px;
+}
+.menu-header{
+    display: flex;
+    width: 300px;
+    justify-content: center;
+    border: 1px solid black;
+    height: 30px;
+    align-content: center;
+    line-height: 30px;
+}
+.shop-header{
+    border: 1px solid black;
+    height: 30px;
+    line-height: 30px;
+    display: flex;
+    justify-content: center;
+    width: 180px;
+    background-color: #FF3399;
+    color: white;
+}
+.shop-header:hover {
+    background-color: yellow;
+    color: red;
+}
+.menu{
+    margin-top: 40px;
+    width: 1400px;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    background-color: black;
+    justify-content: center;
+}
+.menu ul li{
+    height: 40px;
+    line-height: 40px;
+    width: 130px;
+    text-align: center;
+    background-color: black;
+    position: relative;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+
+}
+.menu ul li:hover{
+    background-color: #FF3399;
+}
+.menu .sub{
+    display: none;
+    list-style-image: url("type.png");
+    list-style-position: inside;
+    text-align-last: left;
+    position: absolute;
+}
+.menu .sub li{
+    background-color: #fff;
+    padding: 0px 12px;
+}
+.menu .sub li a{
+    color: black;
+}
+.menu li:hover .sub{
+    display: grid;
+}
+.menu .sub li:first-child{
+    list-style-type: none;
+    list-style-image: none;
+}
+.menu .sub li:first-child a{
+    text-decoration: underline;
+}
+.menu .sub li:hover{
+    background-color: #fff;
+}
+.content{
+    display: flex;
+    justify-content: space-around;
+    width: 1400px;
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: white;
+    font-size: 20px;
+}
+.content .pict-content img{
+    width: 350px;
+    
+}
+.content .pict-content{
+    background-color: #003366;
+}
+.content .pict-content:hover{
+    color: #FFFF66;
+}
+.content .pict-content h4{
+    margin: 5px 0px;
+}
+.content .pict-content p{
+    margin: 5px 0px;
+    margin-bottom: 10px;
+    color: red;
+}
+.content .pict-content span{
+    text-decoration: line-through;
+    font-size: 15px;
+    color: white;
+}
+

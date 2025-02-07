@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var a = parseInt(window.document.karaoke.giovao.value);// so nnguyen
+            var b = parseInt(window.document.karaoke.giora.value);// so nguyen,thuc, chuoi string char
+            var tong = 0;
+            if(a < 24 && a >= 0 && b < 24 && b >= 0 && a<b){
+                for(var i=a;i<b;i++){
+                    if(i<18){
+                        tong+=40;
+                    }
+                    else{
+                        tong +=60;
+                    }
+                }
+            }
+            window.document.karaoke.sumprice.value = tong ;
+        }
+        function Delete(){
+            window.document.karaoke.sumprice.value = "";
+            window.document.karaoke.giora.value = "";
+            window.document.karaoke.giovao.value = "";
+        }
+    </script>
+</head>
+<body>
+    <form name="karaoke">
+        <table border="1">
+            <tr>
+                <th colspan="2" style="height: 60px;">
+                    Tính tiền Karaoke
+                </th>
+            </tr>
+            <tr>
+                <td>Giờ vào: </td>
+                <td><input type="text" name="giovao"></td>
+            </tr>
+            <tr>
+                <td>Giờ ra: </td>
+                <td><input type="text" name="giora"></td>
+            </tr>
+            <tr>
+                <td>Tổng tiền: </td>
+                <td><input type="text" name="sumprice"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Xóa" onclick="Delete();">
+                    <input type="button" value="Tổng" onclick="carryout();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

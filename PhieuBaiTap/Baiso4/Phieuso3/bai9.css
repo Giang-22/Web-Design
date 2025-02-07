@@ -1,0 +1,139 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+.container{
+    display: grid;
+}
+.application{
+    display: flex;
+    gap: 1px;
+}
+.icon{
+    background-color: rgb(200, 198, 198);
+    border-radius: 4px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    padding-top: 4px;
+}
+.language{
+    display: flex;
+}
+.usd{
+    font-size: 12px;
+    color: rgb(200, 198, 198);
+    margin-right: 10px;
+    height: 25px;
+    line-height: 25px;
+}
+.english{
+    font-size: 12px;
+    color: rgb(200, 198, 198);
+    height: 25px;
+    line-height: 25px;
+}
+.cont{
+    font-size: 12px;
+    color: rgb(200, 198, 198);
+    height: 25px;
+    line-height: 25px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+.triangle{
+    margin-left: 10px;
+}
+.menu1{
+    display: flex;
+    justify-content:  space-between;
+    margin: 10px;
+}
+.find{
+    width: 250px;
+    margin-left: 10px;
+}
+
+.icon-find{
+    margin-right: 10px;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+}
+.search{
+    border: 1px solid gray;
+    border-radius: 4px;
+    width: 700px;
+}
+.menu-icon{
+    display: flex;
+}
+.anon{
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.icon-awersom{
+    margin:0px 10px;
+}
+.menu2 ul{
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+.menu2 ul li{
+    width: 100px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+.menu2 ul li a{
+    text-decoration: none;
+    font-size: 13px;
+    color: rgb(151, 150, 150);
+    font-weight: bold;
+}
+.menu2 ul li a:hover{
+    text-decoration: underline;
+}
+.pict-main img{
+    position: relative;
+}
+.pict-main p{
+    position: absolute;
+    top: 300px;
+    left: 150px;
+    color: rgb(251, 149, 166);
+}
+.para1{
+    font-weight: bold;
+    color: black;
+    font-size: 35px;
+}
+.para2{
+    color: gray;
+}
+.para2 span{
+    font-weight: bold;
+    font-size: 20px;
+}
+.para3{
+    background-color: rgb(251, 149, 166);
+    border-radius: 4px;
+    font-size: 8px;
+    padding: 5px 10px;
+    color: white;
+    font-weight: bold;
+}
+.pict-main{
+    display: flex;
+    justify-content: center;
+}

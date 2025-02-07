@@ -1,0 +1,152 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Roboto, Arial, sans-serif;
+}
+.header{
+    display: grid;
+    justify-content: center;
+}
+.header img{
+    position: relative;
+}
+.boxheader{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.boxheader p{
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    color: #0033cc;
+}
+.boxheader p span{
+    font-size: 17px;
+    margin-top: -20px;
+    color: black;
+}
+.menuheader{
+    background-color: #33ccff;
+}
+.sub ul{
+    list-style-type: none;
+    display: flex;
+}
+.sub ul li{
+    height: 40px;
+    width: 130px;
+    text-align: center;
+    line-height: 40px;
+
+}
+.sub ul li a:hover{
+    color: yellow;
+
+}
+.sub ul li a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+}
+.menuheader{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.lpgoheader{
+    display: flex;
+    align-items: center;
+}
+.logohead img{
+    height: 30px;
+}
+.find input{
+    height: 30px;
+    width: 300px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+.menu ul{
+    display: grid;
+    list-style-type: none;
+}
+.far{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.menu ul li{
+    height: 50px;
+    background-color: #33ffff;
+    width: 250px;
+    padding-left: 10px ;
+    line-height: 50px;
+    position: relative;
+    border: 1px solid black;
+}
+.menu ul li a:hover{
+    text-decoration: underline;
+    color: yellow;
+}
+.menu ul li a{
+    text-decoration: none;
+    color: white;
+}
+.menu ul .first{
+    height: 60px;
+    background-color: #0066ff;
+    width: 250px;
+    padding-left: 10px ;
+    line-height: 60px;
+    text-align: center;
+}
+.menu ul .first a{
+    font-weight: bold;
+}
+.menu .submenu{
+    display: none;
+    position: absolute;
+    left: 249px;
+    top: 0px;
+    z-index: 2;
+}
+.menu li:hover .submenu{
+    display: grid;
+}
+.content{
+    display: grid;
+}
+.item{
+    display: flex;
+    width: 1060px;
+    justify-content: space-between;
+}
+.cont1 img{
+    height: 290px;
+    display: flex;
+}
+.subcontent{
+    display: flex; 
+    justify-content: space-between; 
+}
+.cont2{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 800px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.cont2 img{
+    height: 100px;
+}
+.cont2 img:hover{
+    height: 200px;
+}

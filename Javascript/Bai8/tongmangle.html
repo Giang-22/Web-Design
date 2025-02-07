@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var a = window.document.tongmang.array.value;
+            var mang = a.split(",");
+            var tong =0;
+            for(var i=0;i<mang.length;i++){
+                if(mang[i] % 2 !== 0){
+                    tong += parseInt(mang[i]);
+                }
+            }
+            window.document.tongmang.sumcarry.value = tong;
+        }
+    </script>
+</head>
+<body>
+    <form name="tongmang">
+        <table border="1" >
+            <tr>
+                <th colspan="2">
+                    Hiển thị dãy số
+                </th>
+            </tr>
+            <tr>
+                <td>Nhập dãy số: </td>
+                <td><input type="text" name="array"></td>
+            </tr>
+            <tr>
+                <td>Tổng số lẻ: </td>
+                <td><input type="text" name="sumcarry"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Thực hiện" onclick="carryout();">
+                    <input type="button" value="Hủy">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

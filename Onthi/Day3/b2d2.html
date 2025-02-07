@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhập vào một Username và một Password 
+    Yêu cầu hiện ra màn hình TRUE nếu Mật khẩu đạt đủ các yêu cầu sau:
+    Chứa ít nhất 8 ký tự, ký tự dầu không được là chữ số, Chứa ít nhất một chứ in hoa
+    ngược lại trả về FALSE -->
+    <script>
+        function check(){
+            var a = window.document.ktra.use.value;
+            var b = window.document.ktra.pass.value;
+
+            var regex = /^(?![0-9])(?=.*[A-Z]).{8,}$/
+            if(regex.test(b)){
+                alert("TRUE");
+            }
+            else{
+                alert("FALSE");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="ktra">
+        <table>
+            <tr>
+                <td>Usename</td>
+                <td><input type="text" name="use"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="text" name="pass"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Kiểm tra Password" onclick="check();">    
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

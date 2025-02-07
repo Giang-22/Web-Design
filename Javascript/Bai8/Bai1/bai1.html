@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var nameh = window.document.tiendien.namech.value;
+            var a= parseFloat(window.document.tiendien.cscu.value);
+            var b = parseFloat(window.document.tiendien.csmoi.value);
+            var d = parseFloat(window.document.tiendien.dongia.value);
+            var s = b-a;
+            if( !nameh || isNaN(a) || isNaN(b) || isNaN(d)){
+                alert("Yêu cầu nhập đầy đủ thông tin");
+            }
+            else if( a > b || a < 0 || b<=0 || d<=0){
+                alert("Yêu cầu nhập đúng thông tin");
+            }
+            else{
+                if(s <= 10){
+                    window.document.tiendien.thanhtoan.value = s*d;
+                }
+                else if(s <= 50 && s > 10){
+                    window.document.tiendien.thanhtoan.value = 10*d + (s-10)*d*1.5;
+                }
+                else{
+                    window.document.tiendien.thanhtoan.value = 10*d + 40*d*1.5 + (s-50)*d*2;
+                }
+            }
+            var tt = document.getElementById("thongtin");
+            if(s<=10 && s > 0){
+                tt.textContent="Hộ dân";
+                alert("Hộ dân");
+            }
+            else if(s>10){
+                tt.textContent = "Hộ kinh doanh";
+                alert("Hộ kinh doanh")
+            }
+            else{
+                tt.textContent = "";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="tiendien">
+        <table border="1">
+            <tr>
+                <th colspan="2">THANH TOÁN TIỀN ĐIỆN</th>
+            </tr>
+            <tr>
+                <td>Tên chủ hộ: </td>
+                <td><input type="text" name="namech"></td>
+            </tr>
+            <tr>
+                <td>Chỉ số cũ: </td>
+                <td><input type="text" name="cscu"></td>
+            </tr>
+            <tr>
+                <td>Chỉ số mới: </td>
+                <td><input type="text" name="csmoi"></td>
+            </tr>
+            <tr>
+                <td>Đơn giá: </td>
+                <td><input type="text" name="dongia"></td>
+            </tr>
+            <tr>
+                <td>Số tiền thanh toán: </td>
+                <td><input type="text" name="thanhtoan"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tính" onclick="carryout();">
+                </th>
+            </tr>
+        </table>
+        <p id="thongtin"></p>
+    </form>
+</body>
+</html>

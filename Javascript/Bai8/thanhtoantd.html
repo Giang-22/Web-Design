@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tiendien(){
+            var ten = window.document.dien.name.value;
+            var a = parseFloat(window.document.dien.oldd.value);
+            var b = parseFloat(window.document.dien.newd.value);
+            var d = parseFloat(window.document.dien.dongia.value);
+            var s = b-a;
+            if(isNaN(a) || isNaN(b) || isNaN(d) || !ten){
+                alert("NHẬP ĐẦY ĐỦ THÔNG TIN!!!");
+            }
+            else if(a<0 || b<0 || d<=0 || b<a){
+                alert("NHẬP THÔNG TIN PHÙ HỢP!!!");
+            }
+            else{
+                if(s <= 10){
+                    window.document.dien.price.value = s*d;
+                }
+                else if(s <= 50){
+                    window.document.dien.price.value = 10*d + (s-10)*d*1.5;
+                }
+                else{
+                    window.document.dien.price.value = 10*d + 40*d*1.5 + (s-50)*d*2;
+                }
+            }
+            var tb = document.getElementById("thongbao");
+            if(s <= 10){
+                tb.textContent= "Là hộ dân";
+                alert("là hộ dân");
+            }
+            else{
+                tb.textContent="Là hộ kinh doanh";
+                alert("là hộ kinh doanh");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="dien">
+        <table border="1">
+            <tr>
+                <th colspan="3">
+                    THANH TOÁN TIỀN ĐIỆN
+                </th>
+            </tr>
+            <tr>
+                <td>Tên chủ hộ: </td>
+                <td><input type="text" name="name"></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Chỉ số cũ: </td>
+                <td><input type="text" name="oldd"></td>
+                <td>(Kw)</td>
+            </tr>
+            <tr>
+                <td>Chỉ số mới: </td>
+                <td><input type="text" name="newd"></td>
+                <td>(Kw)</td>
+            </tr>
+            <tr>
+                <td>Đơn giá: </td>
+                <td><input type="text" name="dongia"></td>
+                <td>(VNĐ)</td>
+            </tr>
+            <tr>
+                <td>Số tiền thanh toán: </td>
+                <td><input type="text" name="price"></td>
+                <td>(VNĐ)</td>
+            </tr>
+            <tr>
+                <th colspan="3">
+                    <input type="button" value="Tính" onclick="tiendien();">
+                </th>
+            </tr>
+        </table>
+        <p id="thongbao"></p>
+    </form>
+</body>
+</html>

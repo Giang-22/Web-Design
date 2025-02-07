@@ -1,0 +1,118 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.container{
+    display: grid;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    margin-left: 50px;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    width: 1300px;
+    border: 3px double black;
+    align-items: center;
+    margin-top: 30px;
+}
+.search{
+    display: flex;
+    border: 1px solid black;
+    height: 28px;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 4px;
+}
+.shop{
+    margin-right: 50px;
+    border: 1px solid black;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 4px;
+    background-color: #ff3399;
+    color: white;
+}
+.shop:hover{
+    background-color: yellow;
+    color: red;
+}
+.menu{
+    margin-top: 30px;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
+.menu ul li{
+    text-align: center;
+    line-height: 40px;
+    height: 40px;
+    width: 120px;
+    background-color: black;
+    position: relative;
+}
+.menu ul li a{
+    color: white;
+    text-decoration: none;
+}
+.menu ul li:hover{
+    background-color: #ff3399;
+}
+.menu .sub-menu{
+    display: none;
+    position: absolute;
+    list-style-type: disc;
+    list-style-position: inside;
+}
+.menu .sub-menu li{
+    text-align: left;
+    background-color: #fff;
+}
+.menu .sub-menu li:first-child{
+    list-style-type: none;
+    font-weight: bold;
+}
+.menu .sub-menu li:hover{
+    background-color: #fff;
+}
+.menu .sub-menu li a{
+    color: black;
+}
+.menu li:hover .sub-menu{
+    display: grid;
+}
+.content{
+    margin-top: 30px;
+    display: flex; 
+    justify-content: space-around; 
+    text-align: center;
+}
+.content .content-image{
+    background-color: #003366;
+}
+.content .content-image img{
+    width: 350px;
+    margin-bottom: 10px;
+}
+.content .content-image h4{
+    color: #fff;
+}
+.content .content-image h4:hover{
+    color: #ffff66;
+}

@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Baloo Paaji 2", sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url("https://www.publicdomainpictures.net/pictures/30000/nahled/solid-orange-background.jpg");
+    
+}
+.header{
+    display: flex;
+    width: 1300px;
+    justify-content: space-around;
+    height: 100px;
+    align-items: center;
+    margin-top: 30px;
+    border-left: 3px double black;
+    border-top: 4px double black;
+    border-bottom: 4px double black;
+    border-right: 3px double black;
+}
+.logo img{
+    margin-top: 4px;
+    height: 90px;
+}
+.find{
+    display: flex;
+    border: 1px solid black;
+    height: 30px;
+    width: 300px;
+    justify-content: center;
+    background-color: white;
+}
+.find p{
+    line-height: 30px;
+}
+.shop{
+    border: 1px solid black;
+    height: 30px;
+    width: 180px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgb(189, 182, 182);
+    border-radius: 5px;
+}
+.menu{
+    margin-top: 20px;
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+}
+.menu ul li{
+    height: 40px;
+    width: 122px;
+    line-height: 40px;
+    background-color: rgb(195, 193, 193);
+    text-align: center;
+    line-height: 40px;
+    position: relative;
+    transition: width 3s ease-in-out;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu ul li:hover{
+    background-color: #FF3399;
+}
+.menu .sub-menu{
+    display: grid;
+    list-style-type: disc;
+    list-style-position: inside;
+    /* text-align-last: left; */
+    position: absolute;
+    display: none;
+}
+.menu .sub-menu li{
+    text-align: left;
+    padding-left: 10px;
+    background-color: white;
+}
+.sub-menu li a{
+    color: black;
+}
+.menu li:hover .sub-menu{
+    display: grid;
+}
+.sub-menu li:first-child{
+    list-style-type: none;
+    text-decoration: underline;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px;
+    margin-top: 30px;
+}
+.cont{
+    text-align: center;
+    margin-bottom: 30px;
+}
+.cont img{
+    height: 280px;
+}
+.cont h4{
+    font-size: 30px;
+    margin-top: 10px;
+}
+.cont p{
+    font-size: 20px;
+}
+.cont input{
+    height: 35px;
+    width: 150px;
+    border-radius: 6px;
+    margin-top: 8px;
+    color: white;
+    background-color: black;
+    font-weight: bold;
+    font-style: italic;
+}

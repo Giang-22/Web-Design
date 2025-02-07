@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            bottom: 0;
+            box-sizing: border-box;
+        }
+        .world{
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            
+        }
+        .world li a{
+            color: white;
+            text-decoration: none;
+        }
+        .world li{
+            border:1px solid black ;
+            background-color: blue;
+            height: 60px;
+            width: 200px;
+            text-align: center;
+            line-height: 60px
+        }
+        .world li:hover{
+            background-color: red;
+        }
+        .fart{
+            position: relative;
+        }
+        .clasify{
+            list-style: none;
+            position: absolute;
+            top:100%;
+            display: none;
+            left: -200px;
+        }
+        .fart:hover > ul {
+            display: flex;
+        }
+        .clasify li {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <ul class="world">
+        <li><a href="#">Chính trị-xã hội</a></li>
+        <li class="fart"><a href="#">Thế giới</a>
+            <ul class="clasify">
+                <li><a href="#">Thư viện pháp luật</a></li>
+                <li><a href="#">Sống khỏe</a></li>
+                <li><a href="#">Pháp luật</a></li>
+            </ul>
+        </li>
+        <li><a href="#">Nhịp sống trẻ</a></li>
+        <li><a href="#">Giáo dục</a></li>
+        <li><a href="#">Kinh Tế</a></li>
+    </ul>
+</body>
+</html>

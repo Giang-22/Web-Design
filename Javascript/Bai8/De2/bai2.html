@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hienthi(){
+            var a = window.document.displayarray.array.value;
+            var mang = a.split(",");
+            var mangl = [];
+            for(var i = 0;i<mang.length;i++){
+                if(mang[i]%2 != 0 && mang[i]%5 == 0){
+                    mangl.push(mang[i]);
+                }
+            }
+            window.document.displayarray.hienday.value = mangl;
+        }
+    </script>
+</head>
+<body>
+    <form name="displayarray">
+        <table border="1">
+            <tr>
+                <th colspan="2">
+                    Hiển thị dãy số
+                </th>
+            </tr>
+            <tr>
+                <td>Nhập dãy số: </td>
+                <td><input type="text" name="array"></td>
+            </tr>
+            <tr>
+                <td>Dãy số hiển thị: </td>
+                <td><input type="text" name="hienday"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Hiển thị" onclick="hienthi();">
+                    <input type="reset" value="Hủy">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

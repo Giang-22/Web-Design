@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fx(){
+            var n=parseInt(window.document.nhap.n.value);
+            var mau;
+            var f=0;
+            if(n<0){
+                alert("nhap lai n>0");
+            }
+            else{
+                for(i=1;i<=n;i++){
+                    mau = (2*i-1);
+                    f = f + (1/mau);
+                }
+                window.document.nhap.kqua.value = f;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="nhap">
+        Nhập n: 
+        <input type="text" name="n"> <br>
+        F(x) = 
+        <input type="text" name="kqua"> <br>
+        <input type="button" value="Tính" onclick="fx();">
+    </form>
+</body>
+</html>

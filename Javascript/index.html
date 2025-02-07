@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Carryout(){
+            var chuoi = window.document.FindWord.input.value;
+            var list = chuoi.split(" ");
+            var maxlength = 0;
+            var PrintWord = "";
+            var AddressofWord = 0;
+            for(var i=0;i<chuoi.length;i++){
+                if(list[i].length > maxlength){
+                    maxlength = list[i].length;
+                    PrintWord = list[i];
+                    AddressofWord = chuoi.indexOf(PrintWord)+1;
+                }
+            }
+            window.document.FindWord.output.value = '${PrintWord} ở vị trí ${AddressWord}';
+        }
+    </script>
+</head>
+<body>
+    <form name="FindWord">
+        <table border="1" cellspacing="0">
+            <tr>
+                <th colspan="2">Tìm từ dài nhất</th>
+            </tr>
+            <tr>
+                <td>Nhập xâu: </td>
+                <td><input type="text" name="input"></td>
+            </tr>
+            <tr>
+                <td>Thông báo kết quả: </td>
+                <td><input type="text" name="output"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tìm" onclick="Carryout()">
+                    <input type="reset" value="Xóa">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

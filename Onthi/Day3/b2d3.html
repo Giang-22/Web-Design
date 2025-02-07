@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhập vào 2 số a và b 
+    Yêu cầu in ra màn hình Bội chung nhỏ nhất của 2 số a và b 
+    vd: input: 12    10
+        output: 60        
+    -->
+    <script>
+        function check(){
+            var a = parseInt(window.document.Bchung.number1.value);
+            var b = parseInt(window.document.Bchung.number2.value);
+            var mx;
+            if(a>b){
+                mx = a;
+            }
+            else{
+                mx = b;
+            }
+            while(true){
+                if(mx % a === 0 && mx % b === 0){
+                    window.document.Bchung.kqua.value = mx;
+                    break;
+                }
+                    mx++;
+            }       
+        }
+    </script>
+</head>
+<body>
+    <form name="Bchung">
+        <table>
+            <tr>
+                <td>Nhập số thứ nhất: </td>
+                <td><input type="text" name="number1"></td>
+            </tr>
+            <tr>
+                <td>Nhập số thứ hai: </td>
+                <td><input type="text" name="number2"></td>
+            </tr>
+            <tr>
+                <td>BCNN: </td>
+                <td><input type="text" name="kqua"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tìm" onclick="check();">
+                    <input type="reset" value="Xóa">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

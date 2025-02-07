@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Nhập vào họ tên yêu cầu in ra tên của người đó
+    vd: --Nguyen-Van---An----- với mỗi dấu - là một dấu cách thì in ra: An -->
+    <script>
+        function check(){
+            var ht = window.document.findname.hoten.value;
+            var ch = ht.split(" ");
+            for(var i = ch.length - 1;i>=0;i--){
+                if((ch[i][0] >= 'a' && ch[i][0] <= 'z') || (ch[i][0] >= 'A' && ch[i][0] <= 'Z')){
+                    window.document.findname.ten.value = ch[i];
+                    break;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="findname">
+        <table>
+            <tr>
+                <td>Họ và tên:</td>
+                <td><input type="text" name="hoten"></td>
+            </tr>
+            <tr>
+                <td>Tên:</td>
+                <td><input type="text" name="ten"></td>
+            </tr>
+            <tr>
+                <th colspan="2"> <input type="button" value="Tìm" onclick="check();">
+                    <input type="reset" value="Xóa"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

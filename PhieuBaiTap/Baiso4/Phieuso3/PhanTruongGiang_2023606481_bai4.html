@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            bottom: 0;
+            box-sizing: border-box;
+        }
+        .contain ul{
+            list-style-type: none;
+            display: grid;
+            background-color: #8AD385;
+            width:250px;
+            text-align: left;
+        }
+        .contain li{
+            
+            padding: 0 1em;
+            border: 1px solid #e8e8e8;
+            width: auto;
+            height: 40px;
+            line-height: 40px;
+        }
+        .contain li a{
+            text-decoration: none;
+            font-weight: bold;
+            color:#333;
+            display: block;
+        }
+        .contain li:hover {
+            background-color: #cde2cd;
+        }
+        .fart{
+            position: relative;
+        }
+        .fart ul{
+            list-style-type: none;
+            position: absolute;
+            top: 0px;
+            left: 100%;
+            display: none;
+        }
+        .fart ul li{
+            background-color: #8AD385;
+        }
+        .fart:hover>ul{
+            display: grid;
+        }
+    </style>
+</head>
+<body>
+    <div class="contain">
+        <ul>
+            <li><a href="#">Trang chủ</a></li>
+            <li class="fart"><a href="#">Tin tức</a>
+                <ul>
+                    <li><a href="#">WorldPress</a></li>
+                    <li><a href="#">SEO</a></li>
+                    <li><a href="#">Hosting</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </div>
+    
+</body>
+</html>

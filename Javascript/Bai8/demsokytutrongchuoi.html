@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function dem(){
+            var chuoi = window.document.counts.inp.value;
+            var a = window.document.counts.word.value;
+            var cnt=0;
+            for(var i=0;i<chuoi.length;i++){
+                var k = chuoi.charAt(i);
+                if(k == a){
+                    cnt++;
+                }
+            }
+            window.document.counts.outp.value = cnt;
+        }
+        function xoa(){
+            window.document.counts.outp.value = "";
+            window.document.counts.inp.value = "";
+            window.document.counts.word.value = "";
+        }
+    </script>
+</head>
+<body>
+    <form name="counts">
+        <table border="1">
+            <tr>
+                <th colspan="2">
+                    Đếm ký tự
+                </th>
+            </tr>
+            <tr>
+                <td>Nhập chuỗi: </td>
+                <td><input type="text" name="inp"></td>
+            </tr>
+            <tr>
+                <td>Ký tự: </td>
+                <td><input type="text" name="word"></td>
+            </tr>
+            <tr>
+                <td>Số ký là: </td>
+                <td><input type="text" name="outp"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Đếm" onclick="dem();">
+                    <input type="button" value="Hủy" onclick="xoa();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

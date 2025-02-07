@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var t = parseInt(window.document.point.mathpoint.value);
+            var v = parseInt(window.document.point.vpoint.value);
+            var n = parseInt(window.document.point.linguagepoint.value);
+            var s = t+v+n
+            window.document.point.total.value = s;
+            if(s >= 15){
+                window.document.point.result.value = "Đỗ";
+            }
+            else{
+                window.document.point.result.value = "Trượt";
+            }
+        }
+        function Delete(){
+            window.document.point.result.value = " ";
+            window.document.point.total.value = " ";
+            window.document.point.mathpoint.value = " ";
+            window.document.point.vpoint.value = " ";
+            window.document.point.linguagepoint.value = " ";
+            window.document.point.name.value = " ";
+            window.document.point.idstudent.value = " ";
+        }
+    </script>
+</head>
+<body>
+    <form name="point">
+        <table border="1">
+            <tr>
+                <th colspan="2">Quản Lý Điểm</th>
+            </tr>
+            <tr>
+                <td>Mã học sinh: </td>
+                <td><input type="text" name="idstudent"></td>
+            </tr>
+            <tr>
+                <td>Họ Tên: </td>
+                <td><input type="text" name="name"></td>
+            </tr>
+            <tr>
+                <td>Điểm Toán: </td>
+                <td><input type="text" name="mathpoint"></td>
+            </tr>
+            <tr>
+                <td>Điểm Văn: </td>
+                <td><input type="text" name="vpoint"></td>
+            </tr>
+            <tr>
+                <td>Điểm Ngoại ngữ: </td>
+                <td><input type="text" name="linguagepoint"></td>
+            </tr>
+            <tr>
+                <td>Tổng điểm: </td>
+                <td><input type="text" name="total"></td>
+            </tr>
+            <tr>
+                <td>Kết quả: </td>
+                <td><input type="text" name="result"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Tính" onclick="carryout();">
+                    <input type="button" value="Xóa" onclick="Delete();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

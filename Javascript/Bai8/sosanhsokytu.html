@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function check(){
+            var x = window.document.sosanh.xau.value;
+            var y = window.document.sosanh.ktu1.value;
+            var z = window.document.sosanh.ktu2.value;
+            var d = 0;
+            var cnt = 0;
+            for(var i=0;i<x.length;i++){
+                var a = x.charAt(i);
+                if(a == z){
+                    d++;
+                }
+                if(a == y){
+                    cnt++;
+                }
+            }
+            if(d == cnt){
+                window.document.sosanh.kqua.value = "Có";
+            }
+            else{
+                window.document.sosanh.kqua.value = "Không";
+            }
+        }
+        function Delete(){
+            window.document.sosanh.kqua.value = "";
+            window.document.sosanh.ktu1.value = "";
+            window.document.sosanh.ktu2.value = "";
+            window.document.sosanh.xau.value = "";
+        }
+    </script>
+</head>
+<body>  
+    <form name="sosanh">
+        <table border="1">
+            <tr>
+                <th colspan="2">Kiểm tra</th>
+            </tr>
+            <tr>
+                <td>
+                    Nhập xâu: 
+                </td>
+                <td><input type="text" name="xau"></td>
+            </tr>
+            <tr>
+                <td>
+                    Ký tự 1: 
+                </td>
+                <td><input type="text" name="ktu1"></td>
+            </tr>
+            <tr>
+                <td>
+                    Ký tự 2: 
+                </td>
+                <td><input type="text" name="ktu2"></td>
+            </tr>
+            <tr>
+                <td>
+                    Kết quả: 
+                </td>
+                <td><input type="text" name="kqua"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Xóa" onclick="Delete();">
+                    <input type="button" value="Kiểm tra" onclick="check();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

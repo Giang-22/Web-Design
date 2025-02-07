@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function sumn(){
+            var n = parseInt(window.document.tinhtong.in.value);
+            var tong = 0;
+            for(var i=1;i<=n;i++){
+                if(i % 2 == 1){
+                    tong = tong + i;
+                }
+            }
+            window.document.tinhtong.total.value = tong;
+        }
+        function Deln(){
+            window.document.tinhtong.total.value = " ";
+            window.document.tinhtong.in.value = " ";
+        }
+    </script>
+</head>
+<body>
+    <form name="tinhtong">
+        <table border="1">
+            <tr>
+                <th colspan="2">Tính tổng dãy số</th>
+            </tr>
+            <tr>
+                <td>Nhập n: </td>
+                <td><input type="text" name="in"></td>
+            </tr>
+            <tr>
+                <td>Tổng dãy số: </td>
+                <td><input type="text" name="total"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Tính" onclick="sumn();">
+                    <input type="button" value="Xóa" onclick="Deln();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

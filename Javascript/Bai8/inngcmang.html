@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Reserve(){
+            var a = window.document.bai4.array.value;
+            var mang = a.split(",");
+            var mangr = [];
+            var j = 0;
+            for(var i = mang.length-1;i>=0;i--){
+                mangr[j] = mang[i];
+                j++;
+            }
+            window.document.bai4.reserve.value = mangr;
+        }
+    </script>
+</head>
+<body>
+    <form name="bai4">
+        <table border="1">
+            <tr>
+                <th colspan="2">In Ngược Mảng</th>
+            </tr>
+            <tr>
+                <td>
+                    Nhập mảng: 
+                </td>
+                <td>
+                    <input type="text" name="array">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    In ngược mảng: 
+                </td>
+                <td>
+                    <input type="text" name="reserve">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Thực hiện" onclick="Reserve();">
+                    <input type="button" value="Xóa">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

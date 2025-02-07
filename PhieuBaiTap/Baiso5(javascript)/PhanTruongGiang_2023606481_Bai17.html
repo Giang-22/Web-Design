@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tinhf(){
+            var x = parseInt(window.document.nhap.n.value);
+            var f=0;
+            if(x<0){
+                alert("nhap lai so n>0")
+            }
+            else{
+                for(i=0;i<=x;i++){
+                    f = f + (3*i+1);
+                }
+                window.document.nhap.kqua.value=f;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="nhap">
+        Nhập n: 
+        <input type="text" name="n"> <br>
+        F(x) = 
+        <input type="text" name="kqua"> <br>
+        <input type="button" value="Tính" onclick="tinhf();">
+    </form>
+</body>
+</html>

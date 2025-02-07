@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tong(){
+            var timein = parseInt(window.document.kara.in.value);
+            var timeout = parseInt(window.document.kara.out.value);
+            var s = 0;
+            if(timein >= 0 && timein <= 24 && timeout >= 0 && timeout <= 24 && timein<timeout){
+                for(var i = timein;i<timeout;i++){
+                    if(i<=18){
+                        s = s + 40;
+                    }
+                    else{
+                        s = s + 60;
+                    }
+                }
+                window.document.kara.total.value = s;
+            }
+        }
+        function xoa(){
+            window.document.kara.in.value = " ";
+            window.document.kara.out.value = " ";
+            window.document.kara.total.value = " ";
+        }
+    </script>
+</head>
+<body>
+    <form name="kara">
+        <table border="1">
+            <tr>
+                <th colspan="2">Tính tiền Karaoke</th>
+            </tr>
+            <tr>
+                <td>Giờ vào: </td>
+                <td><input type="text" name="in"></td>
+            </tr>
+            <tr>
+                <td>Giờ ra: </td>
+                <td><input type="text" name="out"></td>
+            </tr>
+            <tr>
+                <td>Tổng tiền: </td>
+                <td><input type="text" name="total"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Xóa" onclick="xoa();">
+                    <input type="button" value="Tổng" onclick="tong();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

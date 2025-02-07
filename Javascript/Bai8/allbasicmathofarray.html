@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var a = window.document.math.array.value;
+            var mang = a.split(";");
+            var tong =0;
+            for(var i=0;i<mang.length;i++){
+                tong += parseFloat(mang[i]);
+            }
+            window.document.math.sumarray.value = tong;
+            window.document.math.averagearray.value = tong/mang.length;
+            var m=parseInt(mang[0]);
+            for(var i=0;i<mang.length;i++){
+                if(mang[i] > m){
+                    m = parseFloat(mang[i]);
+                }
+            }
+            window.document.math.maxarray.value = m;
+        }
+        function Delete(){
+            window.document.math.array.value = "";
+            window.document.math.sumarray.value = "";
+            window.document.math.averagearray.value = "";
+        }
+    </script>
+</head>
+<body>
+    <form name="math">
+        <table border="1">
+            <tr>
+                <th colspan="2">
+                Tổng các phần tử trong mảng
+                </th>
+            </tr>
+            <tr>
+                <td style="width: 120px;">Nhập mảng:</td>
+                <td><input type="text" name="array"></td>
+            </tr>
+            <tr>
+                <td>Tổng mảng:</td>
+                <td><input type="text" name="sumarray"></td>
+            </tr>
+            
+            <tr>
+                <td>Trung bình mảng:</td>
+                <td><input type="text" name="averagearray"></td>
+            </tr>
+            <tr>
+                <td>Maximum:</td>
+                <td><input type="text" name="maxarray"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tính" onclick="carryout();">
+                    <input type="button" value="Xóa" onclick="Delete();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

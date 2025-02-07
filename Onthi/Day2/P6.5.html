@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Display(){
+            var m = window.document.ManageScore.Mahs.value;
+            var h = window.document.ManageScore.Tenhs.value;
+            var t = parseFloat(window.document.ManageScore.Dtoan.value);
+            var v = parseFloat(window.document.ManageScore.Dvan.value);
+            var nn = parseFloat(window.document.ManageScore.Dnngu.value);
+            var tong = t + v + nn;
+            if(!m || !h || isNaN(t) || isNaN(v) || isNaN(nn)){
+                alert("Yêu cầu nhập đầy đủ thông tin!!!")
+            }
+            else if(t < 0 || t > 10 || v < 0 || v > 10 || nn < 0 || nn > 10){
+                alert("Thông tin nhập vào không hợp lệ!!!");
+            }
+            else{
+                window.document.ManageScore.tdiem.value = tong;
+                if(tong >= 15 && t > 0 && v >0 && nn > 0){
+                    window.document.ManageScore.Kqua.value = "Đỗ";
+                }
+                else{
+                    window.document.ManageScore.Kqua.value = "Trượt";
+                }
+            }
+            var tb = document.getElementById("warning");
+            if(tong < 15){
+                tb.textContent = "Bạn đã trượt";
+            }
+            else{
+                tb.textContent = "Bạn đã đậu";
+            }
+        }
+        
+    </script>
+</head>
+<body>
+    <form name="ManageScore">
+        <table border="1">
+            <tr style="height: 50px;">
+                <th colspan="2">Quản Lý Điểm</th>
+            </tr>
+            <tr>
+                <td>Mã học sinh: </td>
+                <td><input type="text" name="Mahs"></td>
+            </tr>
+            <tr>
+                <td>Họ Tên </td>
+                <td><input type="text" name="Tenhs"></td>
+            </tr>
+            <tr>
+                <td>Điểm Toán</td>
+                <td><input type="text" name="Dtoan"></td>
+            </tr>
+            <tr>
+                <td>Điểm Văn </td>
+                <td><input type="text" name="Dvan"></td>
+            </tr>
+            <tr>
+                <td>Điểm Ngoại ngữ </td>
+                <td><input type="text" name="Dnngu"></td>
+            </tr>
+            <tr>
+                <td>Tổng điểm </td>
+                <td><input type="text" name="tdiem"></td>
+            </tr>
+            <tr>
+                <td>Kết quả </td>
+                <td><input type="text" name="Kqua"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Tính" onclick="Display();">
+                    <input type="reset" value="Xóa">
+                </td>
+            </tr>
+        </table>
+        <p id = "warning"></p>
+    </form>
+</body>
+</html>

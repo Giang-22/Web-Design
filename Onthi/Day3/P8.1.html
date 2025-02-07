@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Carryout(){
+            var chuoi = window.document.demktu.input1.value;
+            var tu = window.document.demktu.input2.value;
+            var dem = 0;
+            if(chuoi.length > 8){
+                dem ++;
+            }
+            else{
+                dem = 0;
+            }
+            for(var i=0;i<chuoi.length;i++){
+                if(chuoi.charAt(i) >= 'A'  && chuoi.charAt(i) <= 'Z'){
+                    dem++;
+                    break;
+                }
+            }
+            if(chuoi.charAt(0) >= 0 && chuoi.charAt(0) <= 9){
+                dem = 0;
+            }
+            else{
+                dem++;
+            }
+            if(dem == 3){
+                alert("true");
+            }
+            else{
+                alert("false");
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="demktu">
+        <table border="2">
+            <tr>
+                <th colspan="2">
+                    Đếm ký tự
+                </th>
+            </tr>
+            <tr>
+                <td>Nhập chuỗi: </td>
+                <td><input type="text" name="input1"></td>
+            </tr>
+            <tr>
+                <td>Nhập từ: </td>
+                <td><input type="text" name="input2"></td>
+            </tr>
+            <tr>
+                <td>Số từ trong chuỗi: </td>
+                <td><input type="text" name="output"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Check" onclick="Carryout();">
+                    <input type="reset" value="Hủy">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Nhập vào 2 số a và b 
+    Yêu cầu in ra màn hình Ước chung lớn nhất của 2 số a và b 
+    vd: input: 54    102
+        output: 6        
+    -->
+    <script>
+        function check(){
+            var a = parseInt(window.document.Uchung.number1.value);
+            var b = parseInt(window.document.Uchung.number2.value);
+            var mn;
+            if(a>b){
+                mn = b;
+            } 
+            else{
+                mn = a;
+            }
+            while(true){
+                if(a % mn == 0 && b %mn == 0){
+                    window.document.Uchung.kqua.value = mn;
+                    break;
+                }
+                else{
+                    mn--;
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="Uchung">
+        <table>
+            <tr>
+                <td>Nhập số thứ nhất: </td>
+                <td><input type="text" name="number1"></td>
+            </tr>
+            <tr>
+                <td>Nhập số thứ hai: </td>
+                <td><input type="text" name="number2"></td>
+            </tr>
+            <tr>
+                <td>UCNN: </td>
+                <td><input type="text" name="kqua"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tìm" onclick="check();">
+                    <input type="reset" value="Xóa">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

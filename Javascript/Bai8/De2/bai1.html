@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function hienketqua(){
+            var a = parseFloat(window.document.kqhoctap.diemhk1.value);
+            var b = parseFloat(window.document.kqhoctap.diemhk2.value);
+            var avr = (a+b*2)/3;
+            if(isNaN(a) || isNaN(b)){
+                alert("Yêu cầu nhập đầy đủ giá trị");
+            }
+            else{
+                window.document.kqhoctap.diemtb.value=avr;
+            }
+
+            if(avr < 5){
+                window.document.kqhoctap.ketqua.value = "Ở lại lớp";
+            }
+            else{
+                window.document.kqhoctap.ketqua.value = "Được lên lớp";
+            }
+
+            if(avr>=8){
+                window.document.kqhoctap.hocluc.value = "Giỏi";
+            }
+            else if(avr>=6.5 && avr <8){
+                window.document.kqhoctap.hocluc.value = "Khá";
+            }
+            else if(avr>=5&&avr<6.5){
+                window.document.kqhoctap.hocluc.value = "Trung bình";
+            }
+            else{
+                window.document.kqhoctap.hocluc.value = "Kém";
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="kqhoctap">
+        <table>
+            <tr>
+                <th colspan="2">
+                    KẾT QUẢ HỌC TẬP
+                </th>
+            </tr>
+            <tr>
+                <td>Điểm HK1: </td>
+                <td><input type="text" name="diemhk1"></td>
+            </tr>
+            <tr>
+                <td>Điểm HK2: </td>
+                <td><input type="text" name="diemhk2"></td>
+            </tr>
+            <tr>
+                <td>Điểm trung bình: </td>
+                <td><input type="text" name="diemtb"></td>
+            </tr>
+            <tr>
+                <td>Kết quả: </td>
+                <td><input type="text" name="ketqua"></td>
+            </tr>
+            <tr>
+                <td>Xếp loại học lực: </td>
+                <td><input type="text" name="hocluc"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Xem kết quả" onclick="hienketqua();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

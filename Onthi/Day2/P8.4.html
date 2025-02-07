@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function reserve(){
+            var a = window.document.ReplaceArray.array.value;
+            var mang = a.split(",");
+            var mangx = [];
+            for(var i = mang.length - 1;i>=0;i--){
+                mangx.push(mang[i]);
+            }
+            window.document.ReplaceArray.displayarray.value = mangx;
+        }
+    </script>
+</head>
+<body>
+    <form name="ReplaceArray">
+        <table border="1">
+            <tr>
+                <th colspan="2">In Mảng Ngược</th>
+            </tr>
+            <tr>
+                <td>Nhập Mảng: </td>
+                <td><input type="text" name="array"></td>
+            </tr>
+            <tr>
+                <td>In Mảng: </td>
+                <td><input type="text" name="displayarray"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Carry Out" onclick="reserve();">
+                    <input type="reset" value="Delete">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

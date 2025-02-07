@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count The Word</title>
+    <!-- Nhập vào một xâu ký tự và một từ
+    Yêu cầu đếm số từ trong Xâu ký tự đó 
+    vd: input: FALSE TRUE TRUE FALSE FALSE; FALSE
+        output: 3               -->
+    <script>
+        function Carryout(){
+            var chuoi = window.document.Timchuoi.input.value;
+            if(chuoi.length > 225){
+                alert("yêu cầu nhập chuỗi hợp lệ");
+            }
+            var tu = window.document.Timchuoi.input2.value;
+            var tus = chuoi.split(" ");
+            var dem = 0;
+            for(var i = 0;i<tus.length;i++){
+                if(tus[i] == tu){
+                    dem ++;
+                }
+            }
+            window.document.Timchuoi.output.value = dem;
+        }
+    </script>
+</head>
+<body>
+    <form name="Timchuoi">
+        <table>
+            <tr>
+                <td>Nhập chuỗi: </td>
+                <td>
+                    <input type="text" name="input">
+                </td>
+            </tr>
+            <tr>
+                <td>Nhập từ: </td>
+                <td>
+                    <input type="text" name="input2">
+                </td>
+            </tr>
+            <tr>
+                <td>Số từ có 4 ký tự: </td>
+                <td>
+                    <input type="text" name="output">
+                </td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Tìm" onclick="Carryout();">
+                    <input type="reset" value="Hủy bỏ">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

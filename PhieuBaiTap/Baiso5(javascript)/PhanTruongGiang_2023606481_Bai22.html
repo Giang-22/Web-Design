@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cong(){
+            var x = parseInt(window.document.bai22.a.value);
+            var y = parseInt(window.document.bai22.b.value);
+            var t = x+y;
+            window.document.bai22.kq.value = t;
+        }
+        function tru(){
+            var x = parseInt(window.document.bai22.a.value);
+            var y = parseInt(window.document.bai22.b.value);
+            var tr = x-y;
+            window.document.bai22.kq.value = tr;
+        }
+        function nhan(){
+            var x = parseInt(window.document.bai22.a.value);
+            var y = parseInt(window.document.bai22.b.value);
+            var nh = x*y;
+            window.document.bai22.kq.value = nh;
+        }
+        function chia(){
+            var x = parseInt(window.document.bai22.a.value);
+            var y = parseInt(window.document.bai22.b.value);
+            var ch = x/y;
+            window.document.bai22.kq.value = ch;
+        }
+        function mu(){
+            var x = parseInt(window.document.bai22.a.value);
+            var y = parseInt(window.document.bai22.b.value);
+            var m = x**y;
+            window.document.bai22.kq.value = m;
+        }
+    </script>
+</head>
+<body>
+    <form name="bai22">
+        <input type="text" name="a" style="width: 50px;">
+        <input type="button" value="+" onclick="cong();">
+        <input type="button" value="-" onclick="tru();">
+        <input type="button" value="x" onclick="nhan();">
+        <input type="button" value="/" onclick="chia();">
+        <input type="button" value="^" onclick="mu();">
+        <input type="text" name="b" style="width: 50px;">
+         = <input type="text" name="kq" style="width: 70px;">
+</body>
+</html>

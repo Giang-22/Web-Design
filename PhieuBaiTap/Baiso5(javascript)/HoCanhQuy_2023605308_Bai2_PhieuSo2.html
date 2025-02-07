@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var x = 0;
+        var y = 0;
+        var check = 0;
+        function dau(){
+            check = 1;
+        }
+        function nhap(so){
+            if(check == 0){
+                x = x + so;
+            }
+            else {
+                y = y + so;
+            }
+        }
+        function tinh(){
+            window.document.calculator.kq.value = x + y;
+        }
+    </script>
+</head>
+<body>
+    <form name="calculator">
+        <input type="button" value="1" onclick="nhap(1);">
+        <input type="button" value="2" onclick="nhap(2);">
+        <input type="button" value="3" onclick="nhap(3);">
+        <input type="button" value="4" onclick="nhap(4);">
+        <input type="button" value="5" onclick="nhap(5);">
+        <input type="button" value="+" onclick="dau();">
+        <br>
+        <input type="button" value="6" onclick="nhap(6);">
+        <input type="button" value="7" onclick="nhap(7);">
+        <input type="button" value="8" onclick="nhap(8);">
+        <input type="button" value="9" onclick="nhap(9);">
+        <input type="button" value="0" onclick="nhap(0);">
+        <input type="button" value="=" onclick="tinh();">
+        <input type="text" name="kq">
+    </form>
+</body>
+</html>

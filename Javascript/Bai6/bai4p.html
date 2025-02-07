@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính tổng các số nguyên tố</title>
+    <script>
+        // Hàm kiểm tra một số có phải là số nguyên tố không (dùng đệ quy)
+        function isPrimeRecursive(num, divisor) {
+            if (num <= 1) return false;
+            if (divisor === 1) return true;
+            if (num % divisor === 0) return false;
+            return isPrimeRecursive(num, divisor - 1);
+        }
+
+        function isPrime(num) {
+            return isPrimeRecursive(num, Math.floor(Math.sqrt(num)));
+        }
+
+        // Hàm tính tổng các số nguyên tố nhỏ hơn n
+        function sumOfPrimes() {
+            var n = parseInt(document.forms["tinhtong"].elements["inputNum"].value);
+            var sum = 0;
+            for (var i = 2; i < n; i++) {
+                if (isPrime(i)) {
+                    sum += i;
+                }
+            }
+            document.forms["tinhtong"].elements["total"].value = sum;
+        }
+
+        function clearFields() {
+            document.forms["tinhtong"].elements["inputNum"].value = "";
+            document.forms["tinhtong"].elements["total"].value = "";
+        }
+    </script>
+</head>
+<body>
+    <form name="tinhtong">
+        <table border="1">
+            <tr>
+                <th colspan="2">Tính tổng các số nguyên tố nhỏ hơn n</th>
+            </tr>
+            <tr>
+                <td>Nhập n: </td>
+                <td><input type="text" name="inputNum"></td>
+            </tr>
+            <tr>
+                <td>Tổng các số nguyên tố: </td>
+                <td><input type="text" name="total" readonly></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Tính" onclick="sumOfPrimes();">
+                    <input type="button" value="Xóa" onclick="clearFields();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

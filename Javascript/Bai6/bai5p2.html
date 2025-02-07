@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var t = parseFloat(window.document.manage.dtoan.value);
+            var v = parseFloat(window.document.manage.dvan.value);
+            var n = parseFloat(window.document.manage.dngngu.value);
+            var s = t+v+n;
+            window.document.manage.tongdiem.value = s;
+            if(s>=15 && t>0 && v>0 && n>0){
+                window.document.manage.ketqua.value="Đỗ";
+            }
+            else{
+                window.document.manage.ketqua.value="Trượt";
+            }
+        }
+        function Dle(){
+            window.document.manage.ketqua.value="";
+            window.document.manage.tongdiem.value="";
+            window.document.manage.dtoan.value="";
+            window.document.manage.dvan.value="";
+            window.document.manage.dngngu.value="";
+            window.document.manage.fullname.value="";
+            window.document.manage.studentid.value="";
+        }
+    </script>
+</head>
+<body>
+    <form name="manage">
+        <table border="1">
+            <tr>
+                <th colspan="2" style="height: 60px;">
+                    Quản lý điểm
+                </th>
+            </tr>
+            <tr>
+                <td>Mã học sinh: </td>
+                <td><input type="text" name="studentid"></td>
+            </tr>
+            <tr>
+                <td>Họ Tên: </td>
+                <td><input type="text" name="fullname"></td>
+            </tr>
+            <tr>
+                <td>Điểm Toán: </td>
+                <td><input type="text" name="dtoan"></td>
+            </tr>
+            <tr>
+                <td>Điểm Văn: </td>
+                <td><input type="text" name="dvan"></td>
+            </tr>
+            <tr>
+                <td>Điểm Ngoai ngữ: </td>
+                <td><input type="text" name="dngngu"></td>
+            </tr>
+            <tr>
+                <td>Tổng điểm: </td>
+                <td><input type="text" name="tongdiem"></td>
+            </tr>
+            <tr>
+                <td>Kết quả: </td>
+                <td><input type="text" name="ketqua"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <input type="button" value="Tính" onclick="carryout();">
+                    <input type="button" value="Xóa" onclick="Dle();">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

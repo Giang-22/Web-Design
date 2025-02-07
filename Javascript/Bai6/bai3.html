@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tinh(){
+            var n = parseInt(window.document.sumday.n.value);
+            var tong = 0;
+            for(var i=1;i<n;i++){
+                if(i % 2 == 1){
+                    tong += i;
+                }
+            }
+            window.document.sumday.sum.value = tong;
+        }
+        function xoa(){
+            window.document.sumday.sum.value = " ";
+            window.document.sumday.n .value = " ";
+        }
+    </script>
+</head>
+<body>
+    <form name="sumday">
+        <table border="1">
+            <tr>
+                <th colspan="2">
+                    Tính tổng dãy số: 
+                </th>
+            </tr>
+            <tr>
+                <td>Nhập n: </td>
+                <td><input type="text" name="n"></td>
+            </tr>
+            <tr>
+                <td>Tổng dãy số: </td>
+                <td><input type="text" name="sum"></td>
+            </tr>
+            <tr>
+                <th colspan="2" align="left"><input type="button" value="Tính" onclick="tinh();">
+                    <input type="button" value="Xóa" onclick="xoa();"></th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

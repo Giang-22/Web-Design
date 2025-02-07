@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function carryout(){
+            var a = window.document.kara.giovao.value;
+            var b = window.document.kara.giora.value;
+            var tong  = 0;
+            if(a >= 0 && a <= 24 && b >= 0 && b <= 24 && a<b){
+                for(var i = a;i<b;i++){
+                    if(i<18){
+                        tong += 40;
+                    }
+                    else{
+                        tong += 60;
+                    }
+                }
+            }
+            window.document.kara.tinhtong.value = tong;
+        }
+        function Dle(){
+            window.document.kara.tinhtong.value = "";
+            window.document.kara.giovao.value = "";
+            window.document.kara.giora.value = "";
+        }
+    </script>
+</head>
+<body>
+    <form name="kara">
+        <table border="1">
+            <tr>
+                <th colspan="2">
+                    Tính tiền Karaoke
+                </th>
+            </tr>
+            <tr>
+                <td>Giờ vào: </td>
+                <td><input type="text" name="giovao"></td>
+            </tr>
+            <tr>
+                <td>Giờ ra: </td>
+                <td><input type="text" name="giora"></td>
+            </tr>
+            <tr>
+                <td>Tổng tiền: </td>
+                <td><input type="text" name="tinhtong"></td>
+            </tr>
+            <tr>
+                <th colspan="2">
+                    <input type="button" value="Xóa" onclick="Dle();">
+                    <input type="button" value="Tổng" onclick="carryout();">
+                </th>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
