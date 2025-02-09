@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: "Afacad Flux", serif;
+}
+.container{
+    display: grid;
+    width: 100vw;
+    justify-content: center;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    width: 1400px;
+    gap: 40px;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+.left-header{
+    position: relative;
+    height: 240px;
+}
+.left-header img{
+    height: 240px;
+}
+.left-image-content{
+    color: black;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    font-size: 28px;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1);
+}
+.left-image-content:hover{
+    color: #AC1A08;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+.left-image-content span{
+    font-size: 17px;
+}
+.left-image-content span:hover{
+    font-size: 17px;
+    text-decoration: underline;
+}
+.right-header{
+    position: relative;
+    height: 240px;
+}
+.right-header img{
+    height: 240px;
+}
+.right-image-content{
+    position: absolute;
+    top: 20%;
+    left: 5%;
+    font-size: 28px;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1);
+}
+.right-image-content:hover{
+    color: #AC1A08;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+.right-image-content span{
+    font-size: 17px;
+    text-decoration: none;
+}
+.right-image-content span:hover{
+    font-size: 17px;
+    text-decoration: underline;
+}
+.content{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(1, 1fr);
+    justify-content: center;
+}
+.left-content{
+    grid-column: 1/2;
+}
+.right-content{
+    grid-column: 2/6;
+    
+}
+.left-content ul{
+    list-style-type: none;
+    margin-left: 40px;
+    display: grid;
+    align-items: center;
+}
+.left-content ul li{
+    height: 40px;
+    line-height: 40px;
+    position: relative;
+}
+.left-content ul li a{
+    text-decoration: none;
+    color: black;
+}
+.left-content ul .first-child{
+    height: 50px;
+    line-height: 50px;
+    margin-top: 10px;
+}
+.left-content ul .last-child{
+    margin-top: 40px;
+    height: 40px;
+    line-height: 40px;
+}
+.left-content .sub-menu{
+    position: absolute;
+    top: 0px;
+    left: 80px;
+    display: none;
+}
+.left-content li:hover .sub-menu{
+    display: grid;
+    transition: 0.5s ease-in-out;
+}
+.right-content{
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0px;
+    padding-top: 30px;
+}
+.right-content .sub-content img{
+    height: 250px;
+    margin-bottom: 10px;
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.sub-content p span{
+    
+    color:gray ;
+}
+.sub-content img:hover{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+    box-shadow: 4px 4px 4px gray;
+}
+.sub-content img{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1);
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+.sub-content img:hover p{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+}
