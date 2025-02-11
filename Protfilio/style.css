@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Inconsolata", monospace;
+}
+.column11{
+    font-weight: bold;
+}
+.row1 {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+}
+.row2{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+.text21{
+    list-style: none;
+}
+.text22{
+    display: flex;
+    list-style: none;
+}
+.li22{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 12px;
+}
+.li221{
+    margin-left: 15px;
+    font-weight: 500;
+    font-size: 12px;
+    text-decoration: underline;
+}
+.li211{
+    font-weight: 800;
+}
+.li212{
+    font-weight: 500;
+    font-size: 12px;
+}
+.pict1{
+    height: 300px;
+    width: 300px;
+    
+}
+.pict{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row3{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 20px;
+    justify-content: space-around;
+}
+.column11,
+.text21,
+.row4 {
+    margin-left: 75px;
+}
+.fa-solid,
+.column22,
+.row4 {
+    margin-right: 80px;
+}
+.row4{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+.text41{
+    width: 350px;
+    text-align: center;
+    list-style: none;
+}
+.li41{
+    font-weight: bold;
+    
+}
+.li42{
+    font-size: 12px;
+}
+.row5{
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+.pict4{
+    width: 170px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.text22 li{
+    position: relative;
+}
+.text22 .sub-menu{
+    list-style-type: none;
+    position: absolute;
+    width: 100px;
+    display: none;
+    padding-top: 5px;
+}
+.text22 .sub-menu li{
+    height: 15px;
+    position: relative;
+}
+.text22 li:hover .sub-menu{
+    display: grid; 
+}
+.sub-menu .sub-submenu{
+    position: absolute;
+    list-style-type: none;
+    left: 60px;
+    width: 100px;
+    top: 0px;  
+    display: none;
+}
+.sub-menu li:hover .sub-submenu{
+    display: grid;
+}
+.pict img{
+    box-shadow: 4px 4px 4px gray;
+}
+img{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1);
+    
+}
+img:hover{
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+}
